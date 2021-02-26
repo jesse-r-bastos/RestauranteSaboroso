@@ -4,23 +4,10 @@
             <div class="col-md-12">
                 <div class="col-md-6 animate-box">
 
-                <% if (typeof error === "string" && error !== "" ) {%>
-                    <div class="alert alert-danger">
-                        <%= error %>
-                    </div>
-                <% } %> 
-
-                <% if (typeof success === "string" && success !== "") {%>
-                    <div class="alert alert-success">
-                        <h3>
-                             <%= success %>
-                        </h3>
-                       
-                    </div>
-                <% } %> 
+                <%-include('alerts')-%>
             
                 <h3>Reserva de mesa</h3>
-                <form action="/reservations" method='post'>
+                <form action="/reservation"  method="post" id="form-reservas">
                     <div class="row form-group">
                         <div class="col-md-12">
                             <label for="inputName">Nome</label>
@@ -82,3 +69,5 @@
         </div>
     </div>
 </div>
+
+<script src="/js/hcode-formsave.js"></script>

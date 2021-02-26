@@ -1,0 +1,15 @@
+
+<% if (typeof error === "string" && error !== "" ) {%>
+    <div class="alert alert-danger">
+        <%= error %>
+    </div>
+<% } %> 
+
+<% if (typeof success === "string" && success !== "") {%>
+    <div class="alert alert-success">
+        <h3>
+                <%= success %>
+        </h3>
+        
+    </div>
+<% } %>
